@@ -1,0 +1,132 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px;
+}
+
+/* Todo App */
+.todo-app {
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 25px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Heading */
+.todo-app h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-app h1 i {
+  color: #764ba2;
+}
+
+/* Form Row */
+.row {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.row form {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+#input-box {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #764ba2;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  font-size: 16px;
+  outline: none;
+  min-width: 0;
+}
+
+.row button {
+  padding: 12px 18px;
+  background-color: #764ba2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.row button:hover {
+  background-color: #5b3c91;
+}
+
+/* Task List */
+#list-container {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#list-container li {
+  background: #f7f7f7;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-word;
+}
+
+#list-container li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .todo-app {
+    padding: 20px 15px;
+  }
+
+  .todo-app h1 {
+    font-size: 20px;
+  }
+
+  #input-box {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .row button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  #list-container li {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
